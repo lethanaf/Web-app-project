@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Thanks for your order!</title>
+  <style>
+    body {
+      background-color: #ffcfdf;
+      background-image: linear-gradient(315deg, #ffcfdf 0%, #b0f3f1 74%);
+    }
+
+    p {
+      font-size: 2rem;
+    }
+  </style>
+</head>
+
+<body>
+  <section>
+    <p>
+      We appreciate your business!
+    </p>
+  </section>
+  <script>
+    document.addEventListener('DOMContentLoaded', function() {
+      const urlParams = new URLSearchParams(window.location.search);
+      const userId = urlParams.get('userId');
+  
+  fetch('/success-payment', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      userId:userId,
+    }),
+  })
+  .then(response => response.json())
+  .then(data => {
+    // Handle the response data if needed
+    console.log('POST request response:', data);
+  })
+  .catch(error => {
+    console.error('Error performing POST request:', error);
+  });
+});
+
+  </script>
+</body>
+
+</html>

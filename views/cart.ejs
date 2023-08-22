@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/cart.css" />
+<script src="https://kit.fontawesome.com/d29c031c77.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <table>
+        <tr id="first_row"><td>Product</td><td>Name</td><td>Quantity</td><td>Price</td></tr>
+       <% cartProd.map((item)=>{  %>
+            <tr>
+            <div class="item"><form action="/deleteCartItem" method="post">
+                <input type="hidden" name="itemId" value="<%=item._id %>" class="idtag">
+                <td><img src="<%=item.image%>" alt=""></td>
+                <td><p><%= item.name%></p></td>
+                <td><input type="number" min="1" value="<%=item.quantity%>" class="quantity" name="quantity" data-price="<%=item.currentPrice%>"></td>
+                <td><p class="pricetag" data-price="<%=item._id%>"><%= "$"+ (parseFloat(item.currentPrice.split("$")[1]) * item.quantity).toFixed(2) %></p></td>
+                <td><button type="submit" class="deleteCartItem"><i class="fa-solid fa-trash fa-beat"></i></button></td>
+            </form></div>
+        </tr>
+      <%  }) %>
+  <tr ><td colspan="4" id="totalPrice"><a href="/DETAILOFUSER?param1=" id="totPrice">Total:</a></td></tr></table>
+   <script type="text/javascript" src="css/cart.js"></script>
+</body>
+</html>

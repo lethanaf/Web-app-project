@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+  font-family:'Poppins',sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  outline:none;
+  border: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all .2s linear;
+}
+.login-page {
+  width: 24rem;
+  padding: 8% 0 0;
+  margin-left: auto;
+  margin-right: auto;
+ 
+}
+.login-page h1{
+  text-align: center;
+}
+.forgetPassword{
+  color: #999;
+  text-decoration: none;
+  margin-top: 1rem;
+}
+.form {
+  position: relative;
+  z-index: 1;
+  background: #FFFFFF;
+  max-width: 360px;
+  margin: 0 auto 100px;
+  padding: 45px;
+  text-align: center;
+  box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
+}
+.form input {
+ 
+  outline: 0;
+  background: #f2f2f2;
+  width: 100%;
+  border: 0;
+  margin: 0 0 1rem;
+  padding: .9rem;
+  box-sizing: border-box;
+  font-size: 1rem;
+}
+.form button {
+
+  text-transform: uppercase;
+  outline: 0;
+  background: #4CAF50;
+  width: 100%;
+  border: 0;
+  padding: 1rem;
+  color: #FFFFFF;
+  font-size: 1rem;
+  -webkit-transition: all 0.3 ease;
+  transition: all 0.3 ease;
+  cursor: pointer;
+}
+.form button:hover,.form button:active,.form button:focus {
+  background: #43A047;
+}
+
+body {
+  background: #76b852; /* fallback for old browsers */
+  background: -webkit-linear-gradient(right, #76b852, #8DC26F);
+  background: -moz-linear-gradient(right, #76b852, #8DC26F);
+  background: -o-linear-gradient(right, #76b852, #8DC26F);
+  background: linear-gradient(to left, #76b852, #8DC26F);
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;      
+}
+
+.admin{
+  color: rgb(255, 74, 74);
+  font-size: 1.5rem;
+}
+
+
+@media(max-width:991px){
+  html{
+      font-size:55%;
+  }
+  .login-page{
+    margin-top: 10%;
+  }
+}
+@media(max-width:768px){
+  html{
+      font-size: 52%;
+  }
+  
+  .login-page{
+    margin-top: 20%;
+  }
+}
+@media(max-width:450px){
+  html{
+      font-size:50%;
+  }
+  .login-page{
+    margin-top: 35%;
+  }
+ 
+}

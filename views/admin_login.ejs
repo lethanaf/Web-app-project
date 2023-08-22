@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Modern Flat Design Login Form Example</title>
+  <link rel="stylesheet" href="css/design.css">
+
+</head>
+<body>
+<div class="login-page">
+  <h1 class="<%= errorMessage ? 'admin':'' %>"><%= errorMessage ? errorMessage:"Admin Login" %></h1>
+  <div class="form">
+    <form class="login-form" method="post" action="/admin_login">
+      <input type="text" name="username" placeholder="username" autocomplete="off"/>
+      <input type="password" name="password" placeholder="password"/>
+      <button type="submit">login</button>
+      <div class="forgetPassword"><a href="" >Forgot Password ?</a></div>
+    </form>
+  </div>
+</div>
+</body>
+</html>

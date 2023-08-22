@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/detail.css">
+</head>
+
+<body>
+    <form action="/create-checkout-session" method="post">
+        <input type="hidden" name="price" value="<%=pricetopay%>">
+        <h1 class="<%= field ? 'headingfordetail':'' %>"><%= field ? field:"" %></h1>
+        <div class="detail">
+            <div>
+                <label>Name:</label>
+            </div>
+            <div><input type="text" placeholder="enter your name" name="person" required>
+            </div>
+            <div>
+                <label>Address:</label>
+            </div>
+            <div> <input type="text" placeholder="enter your address" name="address" required>
+            </div>
+            <div>
+                <label>Email:</label>
+            </div>
+            <div><input type="email" placeholder="example@gmail.com" name="email" id="email-verify" required><button type="button" class="verify" id="emailVerification">Verify</button></div>
+
+            <div><input type="tel" pattern="[0-9]{6}" name="otpemail" placeholder="123456" autocomplete="off">
+            </div>
+            <div>
+                <label>Mobile:</label>
+            </div>
+            <div><input type="tel" pattern="[0-9]{10}" name="mobileno" placeholder="0123456789" id="sms-verify"><button id="smsVerification" type="button" class="verify">Verify</button>
+            </div>
+            <div><input type="tel" pattern="[0-9]{6}" name="otpphone" placeholder="123456" autocomplete="off">
+            </div>
+            <div><button type="submit">proceed to pay $<%=pricetopay%> </button></div>
+        </div>
+    </form>
+    <script type="text/javascript" src="css/detail.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,16 @@
+div{
+    display:block;
+    max-width:25rem;
+    margin-left:auto;
+    margin-right:auto;
+    text-align:center;
+    
+  }
+  button{
+  background-color:#00ffff;
+    cursor:pointer;
+    border:none;
+    border-radius:2rem;
+    padding:1rem;
+    margin-top:52%;
+  }

@@ -1,0 +1,44 @@
+button[class="toAdd"]{
+    background-color: #4d9dff;
+    padding: .5rem;
+    font-size: 1rem;
+    border-radius: 10%;
+    color: white;
+}
+input[type="text"]{
+    background-color: #dbdbdb;
+}
+label{
+    font-weight: bold;
+}
+h1{
+    color: #ff7800;
+}
+button[class="toAdd"]:hover{
+    background-color: #ff7800;
+}
+input:hover{
+    background-color: #ffffff;
+}
+img{
+    height: 4rem;
+}
+.todelorder:hover{
+    color: #ff7800;
+}
+.Main_User_info{
+    display: block;
+}
+.nested_main{
+    display: inline-flex;
+}
+.info_item{
+    display: inline-block;
+}
+.todelorder{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 1rem;
+    cursor: pointer;
+}

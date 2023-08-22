@@ -1,0 +1,24 @@
+    <%- include('partials/header') %>
+    <section class="products">
+    <h1 class="heading"> our <span>products</span></h1>
+    <div class="product-slider">
+       <% allItems.forEach(function(item){ %>
+            <div class="box">
+                <img src="<%= item.image %>" alt="">
+                <h3><%= item.name %></h3>
+                <div class="price"><%= item.priceRange %></div>
+                <div class="currentRate"><%= item.currentPrice %></div>
+                <div class="stars">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                </div>
+                <a href="addtocartbtn?productId=<%= item.id.split("-")[1] %>"><button class="btn" id="<%= item.id %>">add to cart</button></a>
+            </div>
+      <%  }) %>
+    </div>
+    </section>
+</body>
+</html>

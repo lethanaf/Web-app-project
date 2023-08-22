@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600&display=swap');
+
+*{
+    font-family:'Poppins',sans-serif;
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    outline:none;
+    border: none;
+    text-decoration: none;
+    text-transform: capitalize;
+    transition: all .2s linear;
+}
+img{
+    width: 6rem;
+    height: 6rem;
+}
+input{
+    background-color: #ded7d7;
+    width: 2.8rem;
+    text-align: center;
+}
+
+td{
+    padding: 1rem;
+    text-align: center;
+}
+table{
+    margin: auto;
+}
+tr[id="first_row"]{
+    background-color: #ffb235;
+}
+i:hover{
+    color: #ff7800;
+}
+.pricetag{
+    font-size: 1.2rem;
+    color: rgb(255, 91, 91);
+}
+td[id="totalPrice"]{
+    background-color: #ffb235;
+    font-size: 1.4rem;
+}
+#totPrice{
+    color: #ffffff;
+}
+
+
+@media(max-width:991px){
+    html{
+        font-size:55%;
+    }
+    td{
+    padding: 0;
+    text-align: center;
+}
+}
+@media(max-width:768px){
+    html{
+        font-size: 52%;
+    }
+    td{
+    padding: 0;
+    text-align: center;
+}
+}
+@media(max-width:450px){
+    html{
+        font-size:50%;
+    }
+    td{
+    padding: 0;
+    text-align: center;
+}    
+}
