@@ -12,8 +12,8 @@ const path = require("path");
 const multer = require("multer");
 const nodemailer = require("nodemailer");
 const { log } = require("console");
-const sid = 'AC2dd2f941eb0c4664fe961c4981ada0df';
-const auth_token = '0d6c55071452a611d0b4d9c1463574af';
+const sid = process.env.SID;
+const auth_token = process.env.AUTH_TOKEN;
 const twilio = require('twilio')(sid, auth_token);
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const cache = require('memory-cache');
@@ -50,7 +50,7 @@ app.use(passport.initialize());
 app.use(passport.session());
 
 
-mongoose.connect("mongodb+srv://Nemmy:Abhishek%2301@cluster0.3bzv5pu.mongodb.net/userDB", { useNewUrlParser: true });
+mongoose.connect(process.env.MONGO_URL, { useNewUrlParser: true });
 
 const userSchema = new mongoose.Schema({
   email: String,
@@ -415,7 +415,7 @@ app.post("/sendOTPByEmail", async (req, res) => {
       service: 'gmail',// e.g., Gmail, Outlook,etc
       auth: {
         user: 'grocomarketing@gmail.com',
-        pass: 'siccrsjmdsftpodq',
+        pass: process.env.PASS,
       },
     });
 
