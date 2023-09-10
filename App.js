@@ -18,6 +18,7 @@ const twilio = require('twilio')(sid, auth_token);
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY);
 const cache = require('memory-cache');
 const app = express();
+const port = process.env.PORT || 3000;
 
 // app.use(express.json());
 app.use(express.static("public"));
@@ -573,8 +574,8 @@ app.post("/deleteDoneOrder", async function (req, res) {
 
 })
 
-app.listen(3000, () => {
-  console.log("app is running on port 3000")
+app.listen(port, () => {
+  console.log(`app is running on port ${port}`)
 })
 
 
